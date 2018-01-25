@@ -1,8 +1,6 @@
 package com.example.mt.coolweathermt.util;
 
 import android.text.TextUtils;
-import android.util.Log;
-
 import com.example.mt.coolweathermt.db.City;
 import com.example.mt.coolweathermt.db.County;
 import com.example.mt.coolweathermt.db.Province;
@@ -85,7 +83,7 @@ public class Utility {
             String weatherContent = jsonArray.getJSONObject(0).toString();
             return new Gson().fromJson(weatherContent, Weather.class);
         }catch (Exception e){
-            e.printStackTrace();;
+            e.printStackTrace();
         }
         return  null;
     }
